@@ -14,7 +14,7 @@ class AccessoryController extends Controller
      */
     public function index()
     {
-        //
+        return Accessory::all();
     }
 
     /**
@@ -22,10 +22,10 @@ class AccessoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    /*public function create()
     {
         //
-    }
+    }*/
 
     /**
      * Store a newly created resource in storage.
@@ -35,7 +35,20 @@ class AccessoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'   => 'required',
+            'type'   => 'required',
+            'amount' => 'required'
+        ]);
+
+        $accessory = new Accessory();
+
+        $accessory->name   = $request->name;
+        $accessory->type   = $request->type;
+        $accessory->amount = $request->amount;
+        $accessory->save();
+
+        return $accessory;
     }
 
     /**
@@ -46,7 +59,7 @@ class AccessoryController extends Controller
      */
     public function show(Accessory $accessory)
     {
-        //
+        return $accessory;
     }
 
     /**
@@ -55,10 +68,10 @@ class AccessoryController extends Controller
      * @param  \App\Models\Accessory  $accessory
      * @return \Illuminate\Http\Response
      */
-    public function edit(Accessory $accessory)
+    /*public function edit(Accessory $accessory)
     {
         //
-    }
+    }*/
 
     /**
      * Update the specified resource in storage.
@@ -69,7 +82,18 @@ class AccessoryController extends Controller
      */
     public function update(Request $request, Accessory $accessory)
     {
-        //
+        $request->validate([
+            'name'   => 'required',
+            'type'   => 'required',
+            'amount' => 'required'
+        ]);
+
+        $accessory->name   = $request->name;
+        $accessory->type   = $request->type;
+        $accessory->amount = $request->amount;
+        $accessory->save();
+
+        return $accessory;
     }
 
     /**
@@ -80,6 +104,6 @@ class AccessoryController extends Controller
      */
     public function destroy(Accessory $accessory)
     {
-        //
+        $accessory->delete();
     }
 }
