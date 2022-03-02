@@ -14,7 +14,7 @@ class GameController extends Controller
      */
     public function index()
     {
-        //
+        return Game::all();
     }
 
     /**
@@ -22,10 +22,10 @@ class GameController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    /*public function create()
     {
         //
-    }
+    }*/
 
     /**
      * Store a newly created resource in storage.
@@ -35,7 +35,19 @@ class GameController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'tyep'   => 'required',
+            'amount' => 'required'
+        ]);
+
+        $game = new Game();
+
+        $game->tyep   = $request->type;
+        $game->amount = $request->amount;
+
+        $game->save();
+
+        return $game;
     }
 
     /**
@@ -46,7 +58,7 @@ class GameController extends Controller
      */
     public function show(Game $game)
     {
-        //
+        return $game;
     }
 
     /**
@@ -55,10 +67,10 @@ class GameController extends Controller
      * @param  \App\Models\Game  $game
      * @return \Illuminate\Http\Response
      */
-    public function edit(Game $game)
+    /*public function edit(Game $game)
     {
         //
-    }
+    }*/
 
     /**
      * Update the specified resource in storage.
@@ -69,7 +81,17 @@ class GameController extends Controller
      */
     public function update(Request $request, Game $game)
     {
-        //
+        $request->validate([
+            'tyep'   => 'required',
+            'amount' => 'required'
+        ]);
+
+        $game->tyep   = $request->type;
+        $game->amount = $request->amount;
+
+        $game->save();
+
+        return $game;
     }
 
     /**
@@ -80,6 +102,6 @@ class GameController extends Controller
      */
     public function destroy(Game $game)
     {
-        //
+        return $game->delete();
     }
 }

@@ -2,6 +2,8 @@
 
 use App\Models\Post;
 use App\Http\Controllers\PostsApiController;
+use App\Http\Controllers\AccessoryController;
+use App\Http\Controllers\GameController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +22,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::resource('posts', PostsApiController::class);
+Route::resource('accessories', AccessoryController::class);
+Route::resource('games', GameController::class);
+
 // Route::get('/posts', [PostsApiController::class, 'index']);
 // Route::post('/posts', [PostsApiController::class, 'store']);
 // Route::put('/posts/{post}', [PostsApiController::class, 'update']);
