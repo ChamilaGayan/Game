@@ -50,4 +50,9 @@ class PostsApiController extends Controller
             'success' => $success
         ];
     }
+    
+    public function show($post) 
+    {
+        return $post;
+    }
 }

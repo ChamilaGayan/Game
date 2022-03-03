@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Player;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class PlayerController extends Controller
 {
@@ -14,7 +15,7 @@ class PlayerController extends Controller
      */
     public function index()
     {
-        //
+        return Player::all();
     }
 
     /**
@@ -35,7 +36,40 @@ class PlayerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'username'   => 'required|unique:players',
+            'password'   => 'required|min:6',
+            'email'      => 'required|unique:players|email'
+        ]);
+        if ($validator->fails()) {
+            return [
+                'success' => $validator->errors(),
+            ];
+        } else {
+            return [
+                'success' => "zzz"
+            ];
+        }
+
+        // $request->validate([
+        //     'username'   => 'required|unique:players',
+        //     'password'   => 'required|min:6',
+        //     'email'      => 'required|unique:players|email'
+        // ]);
+
+        // $player = new Player();
+
+        // $player->username     = $request->username;
+        // $player->password     = $request->password;
+        // $player->email        = $request->email;
+        // $player->type         = 1;
+        // $player->totalQuantum = 24;
+
+        // $player->save();
+
+        // return [
+        //     'success' => true
+        // ];
     }
 
     /**
