@@ -20,9 +20,10 @@ class UserController extends Controller
     public function login(){
         if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
             $user = Auth::user();
-            $success['token'] =  $user->createToken('MyLaravelApp')-> accessToken;
+            $success['token'] =  $user->createToken('GameAPI')-> accessToken;
             $success['userId'] = $user->id;
             $success['name'] = $user->name;
+            $success['playerId'] = $user->player_id;
             return response()->json(['success' => $success], $this-> successStatus);
         }
         else{
