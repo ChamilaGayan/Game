@@ -14,16 +14,22 @@
                     <div class="col-item-container">
                         <h2>For Windows users</h2>
                         <button class="win-btn">
-                            <span>Windows</span>
-                            <img src="https://cdn.cloudflare.steamstatic.com/store/about/icon-windows.svg" alt="">
+                            <a href="{{asset('Windows.zip')}}" download>
+                                <span>Windows</span>
+                                <img src="https://cdn.cloudflare.steamstatic.com/store/about/icon-windows.svg" alt="">
+                            </a>
+{{--                            <span>Windows</span>--}}
+{{--                            <img src="https://cdn.cloudflare.steamstatic.com/store/about/icon-windows.svg" alt="">--}}
                         </button>
                         <p>Current Version：1v</p>
                     </div>
                     <div class="col-item-container">
                         <h2>For Mac users (Intel & M1)</h2>
                         <button class="mac-btn">
+                            <a href="{{asset('Mac.zip')}}" download>
                             <span>Mac</span>
                             <img src="https://cdn.cloudflare.steamstatic.com/store/about/icon-macos.svg" alt="">
+                            </a>
                         </button>
                         <p>Current Version：1v</p>
                     </div>

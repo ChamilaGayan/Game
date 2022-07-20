@@ -1,0 +1,261 @@
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    background-color: #13101b;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.page-main-container {
+    width: 100%;
+    height: 100%;
+}
+
+.page-main-container .page-main-outter-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.page-main-container .page-main-outter-container .page-main-inner-container {
+    width: 100%;
+    max-width: 1230px;
+    margin: auto;
+}
+
+.page-main-topic {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    z-index: 11;
+    padding-top: 30px;
+    position: relative;   
+}
+
+.page-main-container .page-main-outter-container .page-main-inner-container .main-two-col-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 10%;
+    z-index: 11;
+    position: relative;   
+}
+
+.page-main-container .page-main-outter-container .page-main-inner-container .main-two-col-container .col-item-container {
+    width: 50%;
+    text-align: center;
+}
+
+.page-main-container .page-main-outter-container .page-main-inner-container .main-two-col-container .col-item-container h2 {
+    color: #fafafa;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.page-main-container .page-main-outter-container .page-main-inner-container .main-two-col-container .col-item-container p {
+    color: #fafafa;
+    font-size: 15px;
+}
+
+.page-main-container .page-main-outter-container .page-main-inner-container .main-two-col-container .col-item-container button {
+    border: none;
+    cursor: pointer;
+    width: calc(100% - 75px);
+    max-width: 230px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    flex-direction: row;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    position: relative;
+    font-family: "Motiva Sans", Sans-serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.win-btn {
+    color: #fff;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+    background: linear-gradient(to right, #06bfff 50%, #2b74ff 100%);
+    background-size: 200%;
+    background-position: right 0;
+    transition: background-position 300ms ease-in;
+}
+.win-btn:hover {
+    background: linear-gradient(to right, #06bfff 20%, #2b74ff 80%);
+}
+
+.win-btn img {
+    width: 100%;
+    max-width: 20px;
+    position: relative;
+    margin-left: 10px;
+}
+
+.mac-btn {
+    color: #fff;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+    background: linear-gradient(to right, #8c75b1 50%, #752abb 100%);
+    background-size: 200%;
+    background-position: right 0;
+    transition: background-position 300ms ease-in;
+}
+.mac-btn:hover {
+    background: linear-gradient(to right, #8c75b1 20%, #752abb 80%);
+}
+
+.mac-btn img {
+    width: 100%;
+    max-width: 18px;
+    position: relative;
+    margin-left: 10px;
+    top: -2px;
+}
+.background-video-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;  
+    z-index: 0;          
+}
+.background-video-card img, video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+footer {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+}
+.user-details-conatiner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0000007c;
+    position: relative;
+    z-index: 1;
+    padding: 20px 0px;
+}
+.user-items {
+    width: 50%;
+    text-align: center;
+}
+.user-items h2 {
+    color: #fff;
+    font-size: 15px;
+}
+.user-items h2 a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #06bfff;
+    cursor: pointer;
+}
+.user-items h2 a:hover {
+    color: #06bfff;
+}
+.user-main-card {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+    position: relative;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 15%);
+}
+.user-reg-main-card {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 5%);
+}
+.user-main-card .mid-card-container {
+    background: #111220ea;
+    border-radius: 22px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+.user-main-card .mid-reg-card-container {
+    background: #111220ea;
+    border-radius: 22px;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+
+.user-main-card .mid-card-container form {
+    width: 100%;
+    padding: 60px 45px 35px;
+}
+.kps-form-conatiner {
+    margin-bottom: 45px;
+    width: 100%;
+}
+.kps-form-conatiner .kps-input-conatiner {
+    width: 100%;
+    display: block;
+    background-color: #fafafa;
+    border-color: #cecece;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    color: #000;
+    font-weight: 400;
+    padding-left: 10px;
+    line-height: 1.8;
+    border: 1px solid #bbb;
+    min-height: 3em;
+    max-width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.kps-form-conatiner .kps-form-check-label {
+    color: #fafafa;
+    margin-left: 10px;
+}
+.kps-form-btn-group {
+    width: 100%;
+    text-align: center;    
+}
+.kps-form-btn-group  .form-submit {
+    border: none;
+    cursor: pointer;
+    width: calc(100% - 75px);
+    max-width: 230px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    flex-direction: row;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    position: relative;
+    font-family: "Motiva Sans", Sans-serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    color: #fff;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+    background: linear-gradient(to right, #06bfff 50%, #2b74ff 100%);
+    background-size: 200%;
+    background-position: right 0;
+    transition: background-position 300ms ease-in;
+}
