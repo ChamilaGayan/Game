@@ -84,6 +84,14 @@ body {
     justify-content: center;
     margin: auto;
 }
+.page-main-container .page-main-outter-container .page-main-inner-container .main-two-col-container .col-item-container button a {
+    text-decoration: none;
+    color: #fff;
+}
+.page-main-container .page-main-outter-container .page-main-inner-container .main-two-col-container .col-item-container button a span {
+    text-decoration: none;
+    color: #fff;
+}
 
 .win-btn {
     color: #fff;
