@@ -89,6 +89,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avalanche</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+   document.querySelectorAll('img').forEach(function(img){
+  	img.onerror = function(){this.style.display='none';};
+   })
+})
+    </script>
+
+    <style type="text/css">
+        option.red {background-color: #cc0000;}
+        option.pink {background-color: #ff6680;}
+        option.blue {background-color: #0000ff;}
+        option.green {background-color: #008000;}
+        option.yellow {background-color: #ffff00;}
+        option.brown {background-color: #a52a2a;}
+        option.cyan {background-color: #00ffff;}
+        option.black {background-color: #000000;}
+        option.white {background-color: #ffffff;}
+        option.purple {background-color: #800080;}
+        </style>
+
 </head>
 
 <body>

@@ -23,7 +23,9 @@ class UserController extends Controller
             $success['token'] =  $user->createToken('GameAPI')-> accessToken;
             $success['userId'] = $user->id;
             $success['name'] = $user->name;
-            $success['playerId'] = $user->player_id;
+            $success['playerId'] = $user->player_id; 
+            $success['image'] = $user->image;
+            $success['colours'] = $user->colours;
             return response()->json(['success' => $success], $this-> successStatus);
         }
         else{

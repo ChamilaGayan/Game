@@ -25,4 +25,15 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function upload(Request $request)
+    {
+        if($request->hasFile('image')){
+            $colour = $request['colour'];
+            $filename = $request->image->getClientOriginalName();
+            $request->image->storeAs('images',$filename,'public');
+            Auth()->user()->update(['image'=>$filename,'colours'=>$colour]);
+        }
+        return redirect()->back();
+    }
 }
